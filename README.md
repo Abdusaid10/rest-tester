@@ -1,25 +1,48 @@
 # rest-tester
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, you’ll get a chance to interact with a Rails application from the command line by sending requests manually. You’ll first build a very simple app (to get some practice with the steps involved in creating a new one) and then a simple script which uses the RestClient gem (which you used in the first project) to send some requests and examine the server output.
 
-Things you may want to cover:
+## Prerequisite
 
-* Ruby version
+- Ruby 2.6.3
+- Rails 5.2.3
 
-* System dependencies
+## Getting started
 
-* Configuration
 
-* Database creation
+```
+git clone https://github.com/abdusaid10/rest-tester.git
+cd rest-tester
+```
 
-* Database initialization
+To get started with the app, clone the repo and then install the needed gems:
 
-* How to run the test suite
+```
+bundle install --without production
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, migrate the database:
 
-* Deployment instructions
+```
+rails db:migrate
+```
 
-* ...
+Finally, run the test suite to verify that everything is working correctly:
+
+```
+rails test
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+rails server
+
+# to test rest end points
+ruby ./app/script/rest_requestor.rb
+
+```
+
+## Author
+- [@abdusaid10](https://github.com/abdusaid10)
+- [@imhta](https://github.com/imhta)
