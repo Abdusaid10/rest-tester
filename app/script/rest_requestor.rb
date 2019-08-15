@@ -1,9 +1,9 @@
 require 'rest-client'
 url ="http://localhost:3000/users"
 puts RestClient.get(url)
-puts "-------------------------"
+puts "-"*20
 puts RestClient.get("http://localhost:3000/users/new")
-puts "-------------------------"
+puts "-"*20
 puts RestClient.get("http://localhost:3000/users/:id")
-puts "-----------------------"
+puts "-"*20
 puts RestClient.get("http://localhost:3000/users/:id/edit")
